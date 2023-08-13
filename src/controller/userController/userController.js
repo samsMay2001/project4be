@@ -1,6 +1,8 @@
 const User = require('../../models/userSchema')
 const getUserfc = require('./getUser')
 const createUserfc = require('./createuser')
+const editUserfc = require('./editUser')
+
 module.exports = {
     get : async (req, res) => {
         try{
@@ -18,7 +20,7 @@ module.exports = {
     }, 
     edit : async (req, res) => {
         // validate email and password 
-
+        editUserfc(User, req, res)
         // return the user
     }, 
     delete : async (req, res) => {
