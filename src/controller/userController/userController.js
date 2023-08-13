@@ -2,6 +2,7 @@ const User = require('../../models/userSchema')
 const getUserfc = require('./getUser')
 const createUserfc = require('./createuser')
 const editUserfc = require('./editUser')
+const deleteUserfc = require('./deleteuser')
 
 module.exports = {
     get : async (req, res) => {
@@ -19,14 +20,10 @@ module.exports = {
         createUserfc(User, req, res)
     }, 
     edit : async (req, res) => {
-        // validate email and password 
         editUserfc(User, req, res)
-        // return the user
     }, 
     delete : async (req, res) => {
-        // validate email and password 
-
-        // return the user
+        deleteUserfc(User, req, res)
     }, 
     
 }

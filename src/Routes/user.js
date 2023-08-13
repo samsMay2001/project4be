@@ -7,6 +7,6 @@ router.get('/', users.get)
 router.get('/getuser', users.getUser)
 router.post('/createuser', users.create)
 router.post('/edit', users.edit)
-// router.post('/')
+router.post('/delete', users.delete)
 
 module.exports = router
