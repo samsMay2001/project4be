@@ -6,6 +6,8 @@ const port = 4000;
 const mongoose = require('mongoose')
 const useRoute = require('./src/Routes/user')
 
+app.use(express.urlencoded({ extended: true })); 
+
 app.use("/user", useRoute)
 
 mongoose.connect(process.env.CONNECTION_STRING)
